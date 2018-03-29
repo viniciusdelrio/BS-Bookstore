@@ -16,7 +16,7 @@ namespace BSBookstore.API
         {
             services.AddMvc();
 
-            AutofacConfig.Config();
+            AutofacIoC.Config();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

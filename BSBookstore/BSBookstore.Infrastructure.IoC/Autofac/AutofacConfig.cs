@@ -4,8 +4,16 @@ using System;
 
 namespace BSBookstore.Infrastructure.IoC
 {
-    public static class AutofacConfig
+    public static class AutofacIoC
     {
+        #region Attributes
+
+        private static IContainer _container;
+
+        #endregion
+
+        #region Methods
+
         public static IServiceProvider Config()
         {
             var builder = new ContainerBuilder();
@@ -13,9 +21,17 @@ namespace BSBookstore.Infrastructure.IoC
             builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
                    .AsImplementedInterfaces();
 
-            var container = builder.Build();
+            _container = builder.Build();
 
-            return new AutofacServiceProvider(container);
+            return new AutofacServiceProvider(_container);
         }
+
+        public static T Resolve<T>()
+        {
+            return _container.Resolve<T>();
+        }
+
+        #endregion
+
     }
 }

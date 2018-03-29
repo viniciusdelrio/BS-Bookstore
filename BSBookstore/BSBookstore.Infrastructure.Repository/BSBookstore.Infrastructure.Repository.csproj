@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BSBookstore.Domain\BSBookstore.Domain.csproj" />
+    <ProjectReference Include="..\BSBookstore.Infrastructure.IoC\BSBookstore.Infrastructure.IoC.csproj" />
+  </ItemGroup>
+
 </Project>

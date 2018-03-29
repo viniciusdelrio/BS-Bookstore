@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Domain", "BSBoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Application", "BSBookstore.Application\BSBookstore.Application.csproj", "{A418B018-8DEE-41A7-AE6F-2247D1C23E73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Infrastructure.Repository.Dapper", "BSBookstore.Infrastructure.Repository.Dapper\BSBookstore.Infrastructure.Repository.Dapper.csproj", "{BD1EFC37-9A76-4369-B271-E07170BB67F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{A418B018-8DEE-41A7-AE6F-2247D1C23E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A418B018-8DEE-41A7-AE6F-2247D1C23E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A418B018-8DEE-41A7-AE6F-2247D1C23E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD1EFC37-9A76-4369-B271-E07170BB67F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD1EFC37-9A76-4369-B271-E07170BB67F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD1EFC37-9A76-4369-B271-E07170BB67F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD1EFC37-9A76-4369-B271-E07170BB67F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{033E7905-685D-4D38-BEB3-2B10D548EDC2} = {BE537D72-BE59-4AAC-B073-A77EF53C501B}
 		{E0DDF15F-74B9-4403-96FB-072A53DC7F7C} = {825113FE-E25C-493E-BCF4-3A431E7780A0}
 		{A418B018-8DEE-41A7-AE6F-2247D1C23E73} = {C635B171-C268-4D22-8441-3C003BC5335C}
+		{BD1EFC37-9A76-4369-B271-E07170BB67F8} = {BE537D72-BE59-4AAC-B073-A77EF53C501B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACC95913-E98D-4A2A-BE15-EBED2DF219C8}
