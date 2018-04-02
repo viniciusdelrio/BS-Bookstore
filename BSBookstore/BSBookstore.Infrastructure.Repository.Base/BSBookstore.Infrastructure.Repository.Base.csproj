@@ -5,12 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DapperExtensions" Version="1.6.3" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BSBookstore.Domain\BSBookstore.Domain.csproj" />
-    <ProjectReference Include="..\BSBookstore.Infrastructure.Repository.Dapper\BSBookstore.Infrastructure.Repository.Dapper.csproj" />
+    <ProjectReference Include="..\BSBookstore.Infrastructure.IoC\BSBookstore.Infrastructure.IoC.csproj" />
   </ItemGroup>
 
 </Project>

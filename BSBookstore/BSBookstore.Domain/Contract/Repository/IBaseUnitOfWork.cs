@@ -7,5 +7,9 @@ namespace BSBookstore.Domain.Contract
     public interface IBaseUnitOfWork
     {
         TRepository GetRepository<TRepository>() where TRepository : IRepository;
+
+        void Commit();
+
+        void Rollback();
     }
 }

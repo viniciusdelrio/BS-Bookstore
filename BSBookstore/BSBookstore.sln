@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.API", "BSBookstore.API\BSBookstore.API.csproj", "{8AFF66C5-7E83-4E91-9824-D2BC3DF549DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSBookstore.API", "BSBookstore.API\BSBookstore.API.csproj", "{8AFF66C5-7E83-4E91-9824-D2BC3DF549DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{D35EAB38-C073-4868-8916-AA8F0BC27E7A}"
 EndProject
@@ -15,15 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{825113
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{BE537D72-BE59-4AAC-B073-A77EF53C501B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Infrastructure.IoC", "BSBookstore.Infrastructure.IoC\BSBookstore.Infrastructure.IoC.csproj", "{B346D4BB-4F71-46A5-ABB4-7EAA38A0A5A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSBookstore.Infrastructure.IoC", "BSBookstore.Infrastructure.IoC\BSBookstore.Infrastructure.IoC.csproj", "{B346D4BB-4F71-46A5-ABB4-7EAA38A0A5A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Infrastructure.Repository", "BSBookstore.Infrastructure.Repository\BSBookstore.Infrastructure.Repository.csproj", "{033E7905-685D-4D38-BEB3-2B10D548EDC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSBookstore.Infrastructure.Repository", "BSBookstore.Infrastructure.Repository\BSBookstore.Infrastructure.Repository.csproj", "{033E7905-685D-4D38-BEB3-2B10D548EDC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Domain", "BSBookstore.Domain\BSBookstore.Domain.csproj", "{E0DDF15F-74B9-4403-96FB-072A53DC7F7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSBookstore.Domain", "BSBookstore.Domain\BSBookstore.Domain.csproj", "{E0DDF15F-74B9-4403-96FB-072A53DC7F7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Application", "BSBookstore.Application\BSBookstore.Application.csproj", "{A418B018-8DEE-41A7-AE6F-2247D1C23E73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSBookstore.Application", "BSBookstore.Application\BSBookstore.Application.csproj", "{A418B018-8DEE-41A7-AE6F-2247D1C23E73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Infrastructure.Repository.Dapper", "BSBookstore.Infrastructure.Repository.Dapper\BSBookstore.Infrastructure.Repository.Dapper.csproj", "{BD1EFC37-9A76-4369-B271-E07170BB67F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSBookstore.Infrastructure.Repository.Dapper", "BSBookstore.Infrastructure.Repository.Dapper\BSBookstore.Infrastructure.Repository.Dapper.csproj", "{BD1EFC37-9A76-4369-B271-E07170BB67F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Infrastructure.Repository.Base", "BSBookstore.Infrastructure.Repository.Base\BSBookstore.Infrastructure.Repository.Base.csproj", "{F950BF71-C840-48AF-AEC1-5AA52D93566F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{BD1EFC37-9A76-4369-B271-E07170BB67F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD1EFC37-9A76-4369-B271-E07170BB67F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD1EFC37-9A76-4369-B271-E07170BB67F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F950BF71-C840-48AF-AEC1-5AA52D93566F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F950BF71-C840-48AF-AEC1-5AA52D93566F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F950BF71-C840-48AF-AEC1-5AA52D93566F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F950BF71-C840-48AF-AEC1-5AA52D93566F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{E0DDF15F-74B9-4403-96FB-072A53DC7F7C} = {825113FE-E25C-493E-BCF4-3A431E7780A0}
 		{A418B018-8DEE-41A7-AE6F-2247D1C23E73} = {C635B171-C268-4D22-8441-3C003BC5335C}
 		{BD1EFC37-9A76-4369-B271-E07170BB67F8} = {BE537D72-BE59-4AAC-B073-A77EF53C501B}
+		{F950BF71-C840-48AF-AEC1-5AA52D93566F} = {BE537D72-BE59-4AAC-B073-A77EF53C501B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACC95913-E98D-4A2A-BE15-EBED2DF219C8}

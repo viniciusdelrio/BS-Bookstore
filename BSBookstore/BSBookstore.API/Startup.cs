@@ -7,19 +7,42 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using BSBookstore.Infrastructure.IoC;
+using Microsoft.Extensions.Configuration;
+using BSBookstore.Infrastructure.Repository;
+using FluentValidation.AspNetCore;
+using BSBookstore.Domain.Validators;
 
 namespace BSBookstore.API
 {
     public class Startup
     {
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc();
+        #region Attributes
 
-            AutofacIoC.Config();
+        public IConfiguration Configuration { get; }
+
+        #endregion
+
+        #region Constructors
+
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        #endregion
+
+        #region Methods
+
+        public IServiceProvider ConfigureServices(IServiceCollection services)
+        {
+            services.AddMvc()
+                    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<AuthorValidator>());
+
+            DapperConfig.Config();
+
+            return AutofacConfig.Config(services, Configuration);
+        }
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -27,6 +50,7 @@ namespace BSBookstore.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMiddleware(typeof(ExceptionHandlingMiddleware));
             app.UseMvc();
 
             app.Run(async (context) =>
@@ -34,5 +58,7 @@ namespace BSBookstore.API
                 await context.Response.WriteAsync("Hello World!");
             });
         }
+
+        #endregion
     }
 }

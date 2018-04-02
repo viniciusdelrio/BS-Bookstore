@@ -9,11 +9,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="7.5.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BSBookstore.Application\BSBookstore.Application.csproj" />
+    <ProjectReference Include="..\BSBookstore.Domain\BSBookstore.Domain.csproj" />
     <ProjectReference Include="..\BSBookstore.Infrastructure.IoC\BSBookstore.Infrastructure.IoC.csproj" />
+    <ProjectReference Include="..\BSBookstore.Infrastructure.Repository\BSBookstore.Infrastructure.Repository.csproj" />
   </ItemGroup>
 
 </Project>

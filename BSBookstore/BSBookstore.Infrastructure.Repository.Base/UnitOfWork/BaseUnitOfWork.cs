@@ -1,10 +1,9 @@
 ﻿using BSBookstore.Domain.Contract;
-using BSBookstore.Infrastructure.IoC;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BSBookstore.Infrastructure.Repository
+namespace BSBookstore.Infrastructure.Repository.Base
 {
     public abstract class BaseUnitOfWork : IBaseUnitOfWork, IDisposable
     {
@@ -35,8 +34,8 @@ namespace BSBookstore.Infrastructure.Repository
             string key = typeof(TRepository).ToString();
 
             if (!_repos.ContainsKey(key))
-            {
-                var rep = AutofacIoC.Resolve<TRepository>();
+            { 
+                var rep = IoC.IoC.Resolve<TRepository>();
 
                 _repos.Add(key, rep);
             }

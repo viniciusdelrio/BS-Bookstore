@@ -1,7 +1,10 @@
 ﻿using BSBookstore.Infrastructure.IoC;
+using BSBookstore.Infrastructure.Repository.Base;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace BSBookstore.Infrastructure.Repository.Dapper
@@ -18,12 +21,14 @@ namespace BSBookstore.Infrastructure.Repository.Dapper
         #region Constructors
 
         public DapperUnitOfWork()
-            : this(AutofacIoC.Resolve<IDbConnection>())
+            : this(IoC.IoC.Resolve<IDbConnection>())
         { }
 
         public DapperUnitOfWork(IDbConnection connection)
         {
             _connection = connection;
+            _connection.Open();
+
             _transaction = _connection.BeginTransaction();
         }
 
@@ -51,6 +56,8 @@ namespace BSBookstore.Infrastructure.Repository.Dapper
             {
                 _transaction.Dispose();
             }
+
+            _connection.Dispose();
 
             base.Dispose();
         }
