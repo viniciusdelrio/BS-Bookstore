@@ -9,5 +9,9 @@ namespace BSBookstore.Infrastructure.Repository
     public class UnitOfWork : DapperUnitOfWork, IUnitOfWork
     {
         public IAuthorRepository AuthorRepository => GetRepository<IAuthorRepository>();
+
+        public ICategoryRepository CategoryRepository => GetRepository<ICategoryRepository>();
+
+        public IBookRepository BookRepository => GetRepository<IBookRepository>();
     }
 }

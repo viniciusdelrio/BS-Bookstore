@@ -15,6 +15,8 @@ namespace BSBookstore.API.Configs.Autofac
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<AuthorService>().As<IAuthorService>();
+            builder.RegisterType<CategoryService>().As<ICategoryService>();
+            builder.RegisterType<BookService>().As<IBookService>();
         }
 
         #endregion

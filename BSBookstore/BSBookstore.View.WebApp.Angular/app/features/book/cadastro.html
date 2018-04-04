@@ -1,0 +1,78 @@
+﻿<div class="container">
+    <div class="card-header">
+        <h3>Cadastro de Livro</h3>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <form name="formCadastro">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="form-group fg-float">
+                            <label for="titulo">Título*</label>
+                            <div class="fg-line">
+                                <input class="form-control"
+                                       name="titulo"
+                                       type="text"
+                                       maxlength="100"
+                                       ng-required="true"
+                                       ng-model="model.title" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-group fg-float">
+                            <label for="anoPublicacao">Ano de Publicação*</label>
+                            <div class="fg-line">
+                                <input class="form-control"
+                                       name="anoPublicacao"
+                                       type="number"
+                                       maxlength="4"
+                                       min="1500"
+                                       max="2018"
+                                       ng-required="true"
+                                       ng-model="model.publishedYear" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group fg-float">
+                            <label for="autor">Autor*</label>
+                            <div class="fg-line">
+                                <select class="form-control"
+                                        ng-required="true"
+                                        ng-model="model.idAuthor"
+                                        ng-options="author.id as author.name for author in authors">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group fg-float">
+                            <label for="categoria">Categoria*</label>
+                            <div class="fg-line">
+                                <select class="form-control"
+                                        ng-required="true"
+                                        ng-model="model.idCategory"
+                                        ng-options="category.id as category.name for category in categories">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="float-right">
+                            <button class="btn btn-danger" type="button" ui-sref="consulta.livro">Voltar</button>
+                            <button class="btn btn-warning" type="reset" ng-show="!isEdit" ng-click="limpar();">Limpar</button>
+                            <button class="btn btn-success" type="submit" ng-click="salvar(formCadastro.$valid)">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

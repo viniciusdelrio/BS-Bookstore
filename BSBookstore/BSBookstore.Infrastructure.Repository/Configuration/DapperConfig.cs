@@ -1,4 +1,4 @@
-﻿using BSBookstore.Infrastructure.Repository.Map;
+﻿using BSBookstore.Infrastructure.Repository.Mapper;
 using DapperExtensions.Mapper;
 using System;
 using System.Collections.Generic;

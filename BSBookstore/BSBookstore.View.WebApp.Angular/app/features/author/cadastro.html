@@ -1,0 +1,35 @@
+﻿<div class="container">
+    <div class="card-header">
+        <h3>Cadastro de Autor</h3>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <form name="formCadastro">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group fg-float">
+                            <label for="nome">Nome*</label>
+                            <div class="fg-line">
+                                <input class="form-control" 
+                                       name="nome"
+                                       type="text" 
+                                       maxlength="100" 
+                                       ng-required="true"
+                                       ng-model="model.name"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="float-right">
+                            <button class="btn btn-danger" type="button" ui-sref="consulta.autor">Voltar</button>
+                            <button class="btn btn-warning" type="reset" ng-show="!isEdit" ng-click="limpar();">Limpar</button>
+                            <button class="btn btn-success" type="submit" ng-click="salvar(formCadastro.$valid)">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

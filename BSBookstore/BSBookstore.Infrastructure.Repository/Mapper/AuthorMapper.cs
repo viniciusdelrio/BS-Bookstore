@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BSBookstore.Infrastructure.Repository.Map
+namespace BSBookstore.Infrastructure.Repository.Mapper
 {
     public class AuthorMapper : ClassMapper<Author>
     {

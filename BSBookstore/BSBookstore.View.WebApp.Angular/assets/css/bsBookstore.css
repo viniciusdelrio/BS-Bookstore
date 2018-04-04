@@ -1,0 +1,95 @@
+﻿/*
+ * Input Feilds
+ */
+.fg-line {
+    position: relative;
+    vertical-align: top;
+}
+
+    .fg-line:not(.form-group) {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .fg-line .form-control:disabled {
+        color: #9d9d9d;
+        background: transparent;
+    }
+
+    .fg-line:not(.disabled):after,
+    .fg-line:not(.readonly):after {
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        content: "";
+        -webkit-transition: all;
+        -o-transition: all;
+        transition: all;
+        -webkit-transition-duration: 300ms;
+        transition-duration: 300ms;
+    }
+
+    .fg-line:not([class*=has-]):after {
+        background: #2196F3;
+    }
+
+    .fg-line.readonly .form-control {
+        color: #9d9d9d;
+        background: transparent;
+    }
+
+    .fg-line.fg-toggled:after {
+        width: 100%;
+    }
+
+.fg-float {
+    margin-top: 2px;
+    position: relative;
+}
+
+    .fg-float .form-control {
+        position: relative;
+        background: transparent;
+        z-index: 1;
+    }
+
+        .fg-float .form-control::-moz-placeholder {
+            color: #fff;
+            opacity: 1;
+        }
+
+        .fg-float .form-control:-ms-input-placeholder {
+            color: #fff;
+        }
+
+        .fg-float .form-control::-webkit-input-placeholder {
+            color: #fff;
+        }
+
+    .fg-float .fg-label {
+        -webkit-transition: all;
+        -o-transition: all;
+        transition: all;
+        -webkit-transition-duration: 200ms;
+        transition-duration: 200ms;
+        position: absolute;
+        top: 5px;
+        font-weight: 400;
+        color: #959595;
+        pointer-events: none;
+        z-index: 0;
+        left: 0;
+        white-space: nowrap;
+    }
+
+    .fg-float .fg-toggled .fg-label {
+        top: -20px;
+        font-size: 11px;
+    }
+
+.control-label {
+    font-weight: normal;
+}

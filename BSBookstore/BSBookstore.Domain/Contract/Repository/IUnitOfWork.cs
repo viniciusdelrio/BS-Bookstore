@@ -7,5 +7,9 @@ namespace BSBookstore.Domain.Contract
     public interface IUnitOfWork : IBaseUnitOfWork
     {
         IAuthorRepository AuthorRepository { get; }
+
+        ICategoryRepository CategoryRepository { get; }
+
+        IBookRepository BookRepository { get; }
     }
 }

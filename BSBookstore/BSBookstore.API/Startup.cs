@@ -50,6 +50,10 @@ namespace BSBookstore.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(x => x.AllowAnyOrigin()
+                              .AllowAnyHeader()
+                              .AllowAnyMethod());
+
             app.UseMiddleware(typeof(ExceptionHandlingMiddleware));
             app.UseMvc();
 

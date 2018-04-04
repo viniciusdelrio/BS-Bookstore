@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BS Bookstore - A sua livraria online!</title>
+
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/libs/bootstrap-sweetalert/sweetalert.css" />
+    <link rel="stylesheet" href="assets/libs/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="assets/libs/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/bsBookstore.css" />
+</head>
+    <body ng-app="BSBookstore">
+
+        <div ng-include="'app/shared/html/template/header.html'"></div>
+        <section ui-view></section>
+        <div ng-include="'app/shared/html/template/footer.html'"></div>
+
+        <!-- Jquery -->
+        <script type="text/javascript" src="assets/libs/jquery/jquery.js"></script>
+
+        <!-- Angular -->
+        <script type="text/javascript" src="assets/libs/angular/angular.js"></script>
+
+        <!-- Vendors -->
+        <script type="text/javascript" src="assets/libs/angular-ui-router/angular-ui-router.js"></script>
+        <script type="text/javascript" src="assets/libs/oclazyload/ocLazyLoad.js"></script>
+        <script type="text/javascript" src="assets/libs/angular-ui-grid/ui-grid.js"></script>
+        <script type="text/javascript" src="assets/libs/angular-linq/angular-linq.js"></script>
+        <script type="text/javascript" src="assets/libs/bootstrap-sweetalert/sweetalert.js"></script>
+        
+
+        <!-- App Level -->
+        <script type="text/javascript" src="app/app.module.js"></script>
+        <script type="text/javascript" src="app/app.routes.js"></script>
+        <script type="text/javascript" src="assets/js/helper.js"></script>
+        <script type="text/javascript" src="assets/js/enums.js"></script>
+        <script type="text/javascript" src="assets/js/messages.js"></script>
+
+        <!-- Services -->
+        <script type="text/javascript" src="app/shared/services/growlService.js"></script>
+        <script type="text/javascript" src="app/shared/services/restService.js"></script>
+
+    </body>
+</html>

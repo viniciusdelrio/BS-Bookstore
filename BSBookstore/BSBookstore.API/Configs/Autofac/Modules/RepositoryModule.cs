@@ -16,6 +16,8 @@ namespace BSBookstore.API.Configs.Autofac
         {
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
             builder.RegisterType<AuthorRepository>().As<IAuthorRepository>();
+            builder.RegisterType<CategoryRepository>().As<ICategoryRepository>();
+            builder.RegisterType<BookRepository>().As<IBookRepository>();
         }
 
         #endregion

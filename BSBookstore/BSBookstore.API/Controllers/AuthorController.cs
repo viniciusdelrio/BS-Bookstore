@@ -67,7 +67,7 @@ namespace BSBookstore.API.Controllers
         {
             _service.Delete(new Guid(id));
 
-            return new NoContentResult();
+            return Ok();
         }
 
         #endregion

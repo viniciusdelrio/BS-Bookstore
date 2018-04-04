@@ -25,7 +25,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSBookstore.Application", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSBookstore.Infrastructure.Repository.Dapper", "BSBookstore.Infrastructure.Repository.Dapper\BSBookstore.Infrastructure.Repository.Dapper.csproj", "{BD1EFC37-9A76-4369-B271-E07170BB67F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSBookstore.Infrastructure.Repository.Base", "BSBookstore.Infrastructure.Repository.Base\BSBookstore.Infrastructure.Repository.Base.csproj", "{F950BF71-C840-48AF-AEC1-5AA52D93566F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSBookstore.Infrastructure.Repository.Base", "BSBookstore.Infrastructure.Repository.Base\BSBookstore.Infrastructure.Repository.Base.csproj", "{F950BF71-C840-48AF-AEC1-5AA52D93566F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BSBookstore.View.WebApp.Angular", "BSBookstore.View.WebApp.Angular\", "{79F5E66D-AB29-4388-943F-3CEC99884F56}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50451"
+		Debug.AspNetCompiler.PhysicalPath = "BSBookstore.View.WebApp.Angular\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50451\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50451"
+		Release.AspNetCompiler.PhysicalPath = "BSBookstore.View.WebApp.Angular\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50451\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50451"
+		SlnRelativePath = "BSBookstore.View.WebApp.Angular\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +83,10 @@ Global
 		{F950BF71-C840-48AF-AEC1-5AA52D93566F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F950BF71-C840-48AF-AEC1-5AA52D93566F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F950BF71-C840-48AF-AEC1-5AA52D93566F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F5E66D-AB29-4388-943F-3CEC99884F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F5E66D-AB29-4388-943F-3CEC99884F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F5E66D-AB29-4388-943F-3CEC99884F56}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F5E66D-AB29-4388-943F-3CEC99884F56}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +99,7 @@ Global
 		{A418B018-8DEE-41A7-AE6F-2247D1C23E73} = {C635B171-C268-4D22-8441-3C003BC5335C}
 		{BD1EFC37-9A76-4369-B271-E07170BB67F8} = {BE537D72-BE59-4AAC-B073-A77EF53C501B}
 		{F950BF71-C840-48AF-AEC1-5AA52D93566F} = {BE537D72-BE59-4AAC-B073-A77EF53C501B}
+		{79F5E66D-AB29-4388-943F-3CEC99884F56} = {D35EAB38-C073-4868-8916-AA8F0BC27E7A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACC95913-E98D-4A2A-BE15-EBED2DF219C8}
