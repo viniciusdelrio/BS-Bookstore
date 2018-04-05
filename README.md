@@ -1,5 +1,5 @@
 # BS-Bookstore
-Projeto simples de uma livraria criado para a intrevista na HBSIS
+Projeto simples de uma livraria criado para a entrevista na HBSIS
 
 =======================================================
 
