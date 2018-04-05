@@ -6,5 +6,7 @@ using System.Text;
 namespace BSBookstore.Domain.Contract
 {
     public interface IAuthorRepository : IRepository<Author>
-    { }
+    {
+        bool HasRelationship(Author author);
+    }
 }

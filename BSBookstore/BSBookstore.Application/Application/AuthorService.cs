@@ -28,6 +28,11 @@ namespace BSBookstore.Application
 
         #region Methods
 
+        /// <summary>
+        /// Busca um autor pelo Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Author Get(Guid id)
         {
             var model = _unitOfWork.AuthorRepository.FindById(id);
@@ -35,6 +40,10 @@ namespace BSBookstore.Application
             return model;
         }
 
+        /// <summary>
+        /// Lista todos os autores
+        /// </summary>
+        /// <returns></returns>
         public IList<Author> GetAll()
         {
             var models = _unitOfWork.AuthorRepository.GetAll();
@@ -42,6 +51,10 @@ namespace BSBookstore.Application
             return models;
         }
 
+        /// <summary>
+        /// Cria ou atualiza um autor
+        /// </summary>
+        /// <param name="model"></param>
         public void Insert(Author model)
         {
             model.ValidateAndThrow(AuthorValidator.InsertRules);
@@ -50,6 +63,10 @@ namespace BSBookstore.Application
             _unitOfWork.Commit();
         }
 
+        /// <summary>
+        /// Exclui um autor
+        /// </summary>
+        /// <param name="id"></param>
         public void Delete(Guid id)
         {
             var model = Get(id);

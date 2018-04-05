@@ -26,6 +26,11 @@ namespace BSBookstore.Application
 
         #region Methods
 
+        /// <summary>
+        /// Busca um livro pelo Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Book Get(Guid id)
         {
             var model = _unitOfWork.BookRepository.FindById(id);
@@ -33,6 +38,10 @@ namespace BSBookstore.Application
             return model;
         }
 
+        /// <summary>
+        /// Lista todos os livros
+        /// </summary>
+        /// <returns></returns>
         public IList<Book> GetAll()
         {
             var models = _unitOfWork.BookRepository.GetAll();
@@ -40,6 +49,10 @@ namespace BSBookstore.Application
             return models;
         }
 
+        /// <summary>
+        /// Cria ou atualiza um livro
+        /// </summary>
+        /// <param name="model"></param>
         public void Insert(Book model)
         {
             model.ValidateAndThrow(BookValidator.InsertRules);
@@ -48,6 +61,10 @@ namespace BSBookstore.Application
             _unitOfWork.Commit();
         }
 
+        /// <summary>
+        /// Exclui um livro
+        /// </summary>
+        /// <param name="id"></param>
         public void Delete(Guid id)
         {
             var model = Get(id);

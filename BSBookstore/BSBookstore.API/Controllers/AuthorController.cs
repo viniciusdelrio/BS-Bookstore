@@ -28,6 +28,10 @@ namespace BSBookstore.API.Controllers
 
         #region Methods
 
+        /// <summary>
+        /// Retorna todos os autores
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -36,6 +40,11 @@ namespace BSBookstore.API.Controllers
             return new ObjectResult(models);
         }
 
+        /// <summary>
+        /// Busca um autor pelo Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult Get(string id)
         {
@@ -49,6 +58,11 @@ namespace BSBookstore.API.Controllers
             return new ObjectResult(model);
         }
 
+        /// <summary>
+        /// Cria ou atualiza um autor
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Save([FromBody] Author model)
         {
@@ -62,6 +76,11 @@ namespace BSBookstore.API.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Exclui um autor
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(string id)
         {

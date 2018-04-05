@@ -6,5 +6,7 @@ using System.Text;
 namespace BSBookstore.Domain.Contract
 {
     public interface ICategoryRepository : IRepository<Category>
-    { }
+    {
+        bool HasRelationship(Category category);
+    }
 }

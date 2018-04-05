@@ -12,4 +12,19 @@
     <ProjectReference Include="..\BSBookstore.Infrastructure.IoC\BSBookstore.Infrastructure.IoC.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Resources\BSResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BSResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\BSResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BSResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

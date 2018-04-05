@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace BSBookstore.API.Configs.Autofac
 {
+    /// <summary>
+    /// Registra todas as injeções de dependências referentes a Service
+    /// </summary>
     public class ServiceModule : Module
     {
         #region Methods

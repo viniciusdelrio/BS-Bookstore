@@ -1,4 +1,35 @@
-﻿angular.module('BSBookstore').config(function ($stateProvider) {
+﻿angular.module('BSBookstore').config(function ($stateProvider, $httpProvider, $urlRouterProvider) {
+
+    //#region Interceptor
+
+    $httpProvider.interceptors.push(function ($q, bsMessages) {
+
+        return {
+            response: function (response) {
+                return response;
+            },
+            responseError: function (rejection) {
+
+                if (rejection.status == 417) {
+                    bsMessages.showMessage({ msg: rejection.data.error }, EnumSwalType.Alert);
+                } else {
+                    return $q.reject(rejection);
+                }
+            }
+        };
+    });
+
+    //#endregion
+
+    //#region States
+
+    $urlRouterProvider.otherwise("/home");
+
+    $stateProvider.state({
+        name: 'home',
+        url: '/home',
+        templateUrl: 'app/features/home/home.html'
+    });
 
     $stateProvider.state({
         name: 'consulta',
@@ -164,4 +195,6 @@
             }
         }
     });
+
+    //#endregion
 });

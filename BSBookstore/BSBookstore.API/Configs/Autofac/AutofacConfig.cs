@@ -13,14 +13,19 @@ using System.Threading.Tasks;
 
 namespace BSBookstore.API
 {
+    /// <summary>
+    /// Realiza a configuração do Autofac (Injeção de dependência)
+    /// </summary>
     public static class AutofacConfig
     {
         public static IServiceProvider Config(IServiceCollection services, IConfiguration configuration)
         {
             var containerBuilder = new ContainerBuilder();
 
+            //Registrando a conexão
             containerBuilder.Register(c => new SqlConnection(configuration.GetConnectionString("DefaultConnection"))).As<IDbConnection>();
 
+            //Registrando os módulos
             containerBuilder.RegisterModule<ServiceModule>();
             containerBuilder.RegisterModule<RepositoryModule>();
 

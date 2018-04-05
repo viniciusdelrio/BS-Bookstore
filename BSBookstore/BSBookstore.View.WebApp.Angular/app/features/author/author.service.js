@@ -30,7 +30,7 @@ function autorServiceFunction(restService, bsMessages) {
     this.excluir = function (id, deleteSuccessCallback) {
         restService.request('author/' + id, 'DELETE').then(
             function (data) {
-                if (data.status == EnumResponseStatus.Success) {
+                if (data && data.status == EnumResponseStatus.Success) {
                     deleteSuccessCallback();
                 }
             },

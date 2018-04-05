@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace BSBookstore.API
 {
+    /// <summary>
+    /// Tratador de exceções para serem enviadas ao front
+    /// </summary>
     public class ExceptionHandlingMiddleware
     {
         #region Attributes
@@ -41,17 +44,22 @@ namespace BSBookstore.API
             }
         }
 
+        /// <summary>
+        /// Trata as exceções
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
         private static Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
+            //Valor default do código de erro
             var code = HttpStatusCode.InternalServerError;
 
-            /* // Tratar o tipo das custom exceptions definindo o código do erro
-            if (exception is MyNotFoundException)
+            //Tratando mensagens do FluentValidation
+            if (exception is ValidationException)
             {
-                code = HttpStatusCode.NotFound;
+                code = HttpStatusCode.ExpectationFailed;
             }
-            else....
-            */
 
             var result = JsonConvert.SerializeObject(new { error = exception.Message });
 

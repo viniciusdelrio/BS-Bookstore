@@ -12,6 +12,7 @@ namespace BSBookstore.Infrastructure.Repository
 
         public static void Config()
         {
+            //Configura qual o assembly que está as classes de mapeamento
             DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(AuthorMapper).Assembly });
         }
 

@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
+using BSBookstore.Domain.Contract;
 using BSBookstore.Domain.Entity;
+using BSBookstore.Infrastructure.IoC;
 using FluentValidation;
+using FluentValidation.Results;
 
 namespace BSBookstore.Domain.Validators
 {
@@ -27,7 +31,15 @@ namespace BSBookstore.Domain.Validators
 
         private void DeleteValidate()
         {
+            RuleFor(x => x).Custom((author, context) =>
+            {
+                var rep = IoC.Resolve<IAuthorRepository>();
 
+                if (rep.HasRelationship(author))
+                {
+                    throw new ValidationException(BSResources.HasRelationship);
+                }
+            });
         }
 
         #endregion

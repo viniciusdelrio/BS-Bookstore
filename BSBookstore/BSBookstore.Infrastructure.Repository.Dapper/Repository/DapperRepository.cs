@@ -14,7 +14,7 @@ namespace BSBookstore.Infrastructure.Repository.Dapper
     {
         #region Attributes
 
-        private IDbConnection _connection;
+        protected IDbConnection _connection;
 
         #endregion
 
