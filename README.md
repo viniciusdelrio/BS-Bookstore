@@ -16,11 +16,11 @@ Projeto simples de uma livraria criado para a intrevista na HBSIS
 
 # Como rodar o projeto
 
-1- Baixar os fontes;
-2- Criar um banco de dados SQLServer e rodar o script "CREATE_DB" da pasta Scripts;
-3- Configurar a string de conexão em "appsettings.json" do projeto "BSBookstore.API";
-4- Configurar o link da API no arquivo "WebApi.ashx" no WebSite "BSBookstore.View.WebApp.Angular";
-5- Rodar ambos os projetos "BSBookstore.View.WebApp.Angular" e "BSBookstore.API";
-6- Brincar!
+- 1. Baixar os fontes;
+- 2. Criar um banco de dados SQLServer e rodar o script "CREATE_DB" da pasta Scripts;
+- 3. Configurar a string de conexão em "appsettings.json" do projeto "BSBookstore.API";
+- 4. Configurar o link da API no arquivo "WebApi.ashx" no WebSite "BSBookstore.View.WebApp.Angular";
+- 5. Rodar ambos os projetos "BSBookstore.View.WebApp.Angular" e "BSBookstore.API";
+- 6. Brincar!
 
 =======================================================
