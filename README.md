@@ -11,6 +11,7 @@ Projeto simples de uma livraria criado para a entrevista na HBSIS
 - Autofac como injeção de dependências;
 - UnitOfWork para centralização de dependências;
 - FluentValidator para realizar validações no back;
+- .NET Core 2.0
 
 =======================================================
 
